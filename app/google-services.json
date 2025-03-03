@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "391611379448",
+    "project_id": "learninghub-test-4ede4",
+    "storage_bucket": "learninghub-test-4ede4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391611379448:android:225b4b3ebe0c921dcbd50d",
+        "android_client_info": {
+          "package_name": "com.example.learning_hub_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC140st6Q5ugnofPp7IcMVektky6A9f8tU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
