@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:padding="16dp">
 
     <TextView
@@ -10,26 +11,29 @@
         android:layout_height="wrap_content"
         android:text="What do you want to learn today?"
         android:textSize="18sp"
-        android:layout_marginBottom="8dp" />
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/blue"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="20dp" />
 
     <EditText
         android:id="@+id/editTextPrompt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter a title of the lesson you want to learn..."
-        android:minLines="3"
+        android:layout_width="280dp"
+        android:layout_height="195dp"
+        android:hint="Enter the title of the lesson you want to learn..."
+        android:minLines="8"
         android:gravity="top"
         android:inputType="textMultiLine"
         android:background="@android:drawable/edit_text"
-        android:padding="8dp"
+        android:layout_marginBottom="20dp"
         android:textSize="16sp" />
 
     <Button
         android:id="@+id/btnGenerate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="280dp"
+        android:layout_height="46dp"
         android:text="Generate"
-        android:layout_marginTop="8dp" />
+        android:background="@drawable/textinputbg" />
 
     <ProgressBar
         android:id="@+id/progressBar"

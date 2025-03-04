@@ -44,28 +44,18 @@ class LearningHubGenerate : AppCompatActivity() {
     private fun generateLesson(prompt: String) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val chat = model.startChat(
-                    listOf(content("user") {
-                        text("imagine you're a feature on an app called Sexactly that helps people learn. " +
-                                "a feature called LearningHub: Interactive Modules: Courses on sexual health topics generated through A.I. " +
-                                "Create a lesson for me to study about: $prompt. " +
-                                "The lesson should be long but understandable and include a title, description/objectives, useful content, and references. " +
-                                "In generating, you should proceed to the lesson title (in bold text) no need to say Okay, I can create a blah blah." +
-                                "make sure you are only providing accurate and correct information with reliable references and sources" +
-                                "put this disclaimer at the end of the lesson: Disclaimer: This module is for informational purposes only and does not " +
-                                "constitute medical advice. Please consult with a qualified healthcare professional for any health concerns or before making " +
-                                "any decisions related to your health or treatment.")
-                    })
-                )
-
-                val response = chat.sendMessage(prompt)
+                val response = model.generateContent(content {
+                    text(
+                        "Create a lesson about: $prompt. " +
+                                "Include a title, objectives, useful content, and references. " +
+                                "End with: 'Disclaimer: This module is for informational purposes only and does not constitute medical advice.'"
+                    )
+                })
 
                 withContext(Dispatchers.Main) {
                     progressBar.visibility = View.GONE
-
                     val generatedLesson = response.text ?: "No lesson generated."
 
-                    // Navigate to the overview page with the generated lesson
                     val intent = Intent(this@LearningHubGenerate, LearningHubOverview::class.java)
                     intent.putExtra("lessonContent", generatedLesson)
                     intent.putExtra("lessonPrompt", prompt)
@@ -74,7 +64,8 @@ class LearningHubGenerate : AppCompatActivity() {
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
                     progressBar.visibility = View.GONE
-                    Toast.makeText(this@LearningHubGenerate, "Error generating lesson: ${e.message}", Toast.LENGTH_LONG).show()
+                    e.printStackTrace()
+                    Toast.makeText(this@LearningHubGenerate, "Error: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
                 }
             }
         }

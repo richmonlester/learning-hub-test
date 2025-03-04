@@ -2,22 +2,30 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="20dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
 
     <Button
         android:id="@+id/btnGenerateLesson"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Generate a lesson" />
+        android:layout_width="330dp"
+        android:layout_height="80dp"
+        android:text="Generate a Lesson"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:background="@drawable/learning_hub_layout"
+        android:backgroundTint="@color/babyblue"
+        />
 
     <TextView
         android:id="@+id/tvMyLibrary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="start"
         android:text="My Library"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:layout_marginTop="16dp" />
 
     <androidx.recyclerview.widget.RecyclerView

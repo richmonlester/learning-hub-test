@@ -67,4 +67,6 @@ dependencies {
 
     implementation (libs.material)
     implementation (libs.androidx.cardview)
+    implementation (libs.play.services.auth) // Ensure Play Services auth is available
+    implementation (libs.generativeai.v030) // Gemini API SDK
 }

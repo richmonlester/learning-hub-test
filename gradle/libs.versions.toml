@@ -1,6 +1,7 @@
 [versions]
 agp = "8.8.0"
 cardview = "1.0.0"
+generativeaiVersion = "0.3.0"
 kotlin = "2.0.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -12,6 +13,7 @@ composeBom = "2024.04.01"
 googleGmsGoogleServices = "4.4.2"
 firebaseFirestore = "25.1.2"
 material = "1.12.0"
+playServicesAuth = "21.3.0"
 recyclerview = "1.4.0"
 appcompat = "1.7.0"
 generativeai = "0.9.0"
@@ -22,6 +24,7 @@ toolsCore = "1.0.0-alpha12"
 [libraries]
 androidx-cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+generativeai-v030 = { module = "com.google.ai.client.generativeai:generativeai", version.ref = "generativeaiVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -41,6 +44,7 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 generativeai = { group = "com.google.ai.client.generativeai", name = "generativeai", version.ref = "generativeai" }
 firebase-database-ktx = { group = "com.google.firebase", name = "firebase-database-ktx", version.ref = "firebaseDatabaseKtx" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 volley = { group = "com.android.volley", name = "volley", version.ref = "volley" }
 androidx-tools-core = { group = "androidx.privacysandbox.tools", name = "tools-core", version.ref = "toolsCore" }
 
