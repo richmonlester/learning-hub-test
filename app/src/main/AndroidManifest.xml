@@ -20,8 +20,10 @@
         <activity android:name=".LessonView" />
         <activity android:name=".LearningHubOverview" />
         <activity android:name=".LearningHubGenerate" />
+        <activity android:name=".LearningHubMain" />
+
         <activity
-            android:name=".LearningHubMain"
+            android:name=".Home_Page"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Learninghubtest">

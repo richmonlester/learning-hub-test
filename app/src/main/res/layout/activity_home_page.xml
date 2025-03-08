@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/babypink"
+    android:backgroundTint="@color/babypink"
+    android:orientation="vertical"
+    tools:context=".Home_Page">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/greeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello, Hezrone!"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:translationY="30dp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                />
+            <Button
+                android:id="@+id/askRaya"
+                android:layout_width="350dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/blue_home_button_shadow"
+                android:backgroundTint="@color/babyblue"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingBottom="50dp"
+                android:text="Ask Raya"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="30dp"
+                tools:ignore="RtlCompat"
+                android:fontFamily="@font/poppins_regular"
+                />
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="-140dp"
+                android:elevation="20dp"
+                android:rotation="-3"
+                android:translationX="240dp"
+                app:srcCompat="@drawable/ask_ai_home"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginTop="15dp"
+
+                >
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/blue_smallbutton_shadow"
+                    android:backgroundTint="@color/babyblue"
+                    android:gravity="start"
+                    android:layout_marginLeft="-25dp"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/learningHub"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginEnd="-75dp"
+                    android:elevation="20dp"
+                    app:srcCompat="@drawable/learning_hub_img"
+                    android:translationX="-92dp"
+                    android:translationY="-15dp"
+                    />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="30dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="Learning Hub"
+                    android:textColor="@color/blue"
+                    android:layout_marginLeft="-110dp"
+                    android:translationY="50dp"
+                    />
+
+                <Button
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/blue_smallbutton_shadow"
+                        android:backgroundTint="@color/babyblue"
+                        android:layout_marginLeft="20dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/safeSpace"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:elevation="20dp"
+                        android:translationX="-104dp"
+                        android:translationY="-20dp"
+                        app:srcCompat="@drawable/safe_space_img" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="-80dp"
+                        android:elevation="30dp"
+                        android:text="Safe Space"
+                        android:textColor="@color/blue"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginLeft="-200dp"
+                        android:translationY="50dp"
+
+
+                        />
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/blue_smallbutton_shadow"
+                        android:backgroundTint="@color/babyblue"
+                         />
+
+                    <ImageView
+                        android:id="@+id/support"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:layout_marginEnd="-85dp"
+                        android:elevation="20dp"
+                        android:translationX="-92dp"
+                        android:translationY="-20dp"
+                        app:srcCompat="@drawable/nearby_supp_img" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="-80dp"
+                        android:elevation="30dp"
+                        android:text="Support"
+                        android:textColor="@color/blue"
+                        android:translationX="-80dp"
+                        android:translationY="50dp"
+                        android:fontFamily="@font/poppins_regular"
+
+                        />
+                </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="25dp"
+                android:text="Recent Lessons"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_recent_lessons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingLeft="25dp"
+                android:text="Trending Topics"
+                android:textColor="@color/blue"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@drawable/button_radius"
+                    android:backgroundTint="@color/pink"
+                    android:text="Support"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/button_radius"
+                    android:backgroundTint="@color/pink"
+                    android:text="LGBTQIA+"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/blue_home_button_shadow"
+                android:backgroundTint="@color/babyblue" />
+
+            <Button
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/blue_home_button_shadow"
+                android:backgroundTint="@color/babyblue" />
+
+            <Button
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/blue_home_button_shadow"
+                android:backgroundTint="@color/babyblue" />
+
+            <Button
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/blue_home_button_shadow"
+                android:backgroundTint="@color/babyblue" />
+
+            <Button
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/blue_home_button_shadow"
+                android:backgroundTint="@color/babyblue" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="415dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/nav_bar"
+        android:orientation="horizontal"
+        android:paddingLeft="50dp"
+        android:paddingRight="45dp"
+        android:translationY="-50dp">
+
+        <ImageView
+            android:id="@+id/home_bttn"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            app:srcCompat="@drawable/nav_home"
+
+            />
+
+        <ImageView
+            android:id="@+id/chatbot_bttn"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="95dp"
+            android:translationY="-4dp"
+            app:srcCompat="@drawable/nav_chatbot" />
+
+        <ImageView
+            android:id="@+id/profile_bttn"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="95dp"
+            app:srcCompat="@drawable/nav_profile_img" />
+
+    </LinearLayout>
+
+</LinearLayout>

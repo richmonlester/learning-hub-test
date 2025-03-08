@@ -35,13 +35,13 @@
 
             <TextView
                 android:id="@+id/tvTitle"
-                android:textColor="@color/black"
+                android:textColor="@color/blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lesson Title"
                 android:textAllCaps="true"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_bold"/>
 
             <ProgressBar
                 android:id="@+id/progressBarItem"

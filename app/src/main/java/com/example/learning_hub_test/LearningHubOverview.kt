@@ -41,7 +41,7 @@ class LearningHubOverview : AppCompatActivity() {
 
         // Handle Save Button
         btnSave.setOnClickListener {
-            val lesson = hashMapOf("title" to lessonPrompt, "content" to lessonContent)
+            val lesson = hashMapOf("title" to lessonPrompt, "content" to lessonContent, "timestamp" to System.currentTimeMillis())
 
             db.collection("lessons").add(lesson)
                 .addOnSuccessListener {
@@ -60,7 +60,6 @@ class LearningHubOverview : AppCompatActivity() {
             .replace("\\*\\*(.*?)\\*\\*".toRegex(), "<b>$1</b>") // Convert **bold** to <b>bold</b>
             .replace("\n\n", "<br><br>") // Preserve paragraph spacing
             .replace("\n", "<br>") // Ensure single line breaks are respected
-
         return Html.fromHtml(htmlText, Html.FROM_HTML_MODE_LEGACY)
     }
 }

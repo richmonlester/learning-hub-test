@@ -1,36 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal">
+    android:background="@color/babypink"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnGenerateLesson"
-        android:layout_width="330dp"
-        android:layout_height="80dp"
-        android:text="Generate a Lesson"
-        android:fontFamily="@font/poppins_bold"
-        android:textSize="20dp"
-        android:textAllCaps="false"
-        android:background="@drawable/learning_hub_layout"
-        android:backgroundTint="@color/babyblue"
-        />
-
-    <TextView
-        android:id="@+id/tvMyLibrary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:text="My Library"
-        android:textSize="20sp"
-        android:layout_marginTop="16dp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvLessons"
+    <!-- Top Navigation Bar -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp" />
+        android:layout_height="60dp"
+        android:paddingLeft="20dp"
+        android:background="@color/truewhite"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/backLH"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/back_icon"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/lhText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LearningHub"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:padding="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginLeft="10dp"
+            android:translationY="-8dp"
+            android:layout_marginBottom="-6dp"
+            />
+    </LinearLayout>
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnGenerateLesson"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:text="Generate a Lesson"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:background="@drawable/learning_hub_layout"
+            android:backgroundTint="@color/babyblue" />
+
+        <TextView
+            android:id="@+id/tvMyLibrary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="My Library"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLessons"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
 </LinearLayout>
